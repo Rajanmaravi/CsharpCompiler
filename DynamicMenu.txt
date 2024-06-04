@@ -1,0 +1,112 @@
+CREATE TABLE [dbo].[Menu_tbl](
+	[MenuID] [int] IDENTITY(1,1) NOT NULL,
+	[MenuName] [varchar](50) NULL,
+	[PageUrl] [varchar](100) NULL,
+	[ParentId] [int] NULL,
+	[isActive] [bit] NULL,
+CONSTRAINT [PK_Menu_tbl] PRIMARY KEY CLUSTERED 
+(
+	[MenuID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Menu_tbl] ON 
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (1, N'Admin Setting', N'#', 0, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (2, N'Country', N'/Country/Index', 1, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (3, N'State', N'/State/Index', 1, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (4, N'District', N'/District/Index', 1, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (5, N'City', N'/City/Index', 1, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (6, N'Role', N'/Role/Index', 1, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (7, N'Module', N'/Module/Index', 1, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (8, N'Page', N'/Page/Index', 1, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (9, N'Menu', N'/Menus/Index', 1, 0)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (10, N'Menu', N'/Menu/Index', 1, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (11, N'Add Certificate', N'/certificate/AddCertificate', 1, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (12, N'View Certificate', N'/certificate/CertificateList', 1, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (13, N'View Status', N'/certificate/ViewBirthApplicationStatus', 1, 0)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (14, N'Initial Settings', N'#', 0, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (15, N'Company Details', N'/Company/Index', 14, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (16, N'Option Settings', N'/Divison/Index', 14, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (17, N'PT Rate Editor', N'/Divison', 14, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (18, N'PF/ESI Rate Editor', N'/Divison/Index', 14, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (19, N'Master', N'#', 0, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (20, N'Divison', N'/Divison/Index', 19, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (21, N'Occupation', N'/Occupation/Index', 19, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (22, N'Designation', N'/Designation/Index', 19, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (23, N'Grade', N'/Grade/Index', 19, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (24, N'Department', N'/Department/Index', 19, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (25, N'ESI GROUP', N'/ESIGroup/Index', 19, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (26, N'PF GROUP', N'/PF/Index', 19, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (27, N'PT GROUP', N'/PT/Index', 19, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (28, N'Branch Details', N'/Branch/Index', 19, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (29, N'Employee Management', N'#', 0, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (30, N'Employee', N'/Employee/Index', 29, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (31, N'Employee Details', N'/Employee/EmployeeDetails', 29, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (32, N'Emp. Profile', N'/Employee/EmployeeProfile', 29, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (33, N'Employee Info', N'/Employee/EmployeeInfo', 29, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (34, N'Salary Structure', N'#', 0, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (35, N'Sal Structure Definition', N'/Salary/SalaryStructureDefinition', 34, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (36, N'Assign Heads', N'/Salary/SalaryHead', 34, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (37, N'Assign Heads to Structure', N'/Salary/SalaryHead', 34, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (38, N'Attendance', N'#', 0, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (39, N'Holiday List', N'/Holiday/Index', 38, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (40, N'Leave Summary', N'/Employee/LeaveSummary', 38, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (41, N'User Setting', N'#', 0, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (42, N'Users', N'/Users/Index', 41, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (43, N'Change Password', N'/Account/ChangePassword', 41, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (44, N'System Setting', N'#', 0, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (45, N'User Permission', N'/Users/UserRights', 44, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (46, N'Reports', N'#', 0, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (47, N'Monthly Report', N'/Registration/RegistrationDetails', 46, 1)
+GO
+INSERT [dbo].[Menu_tbl] ([MenuID], [MenuName], [PageUrl], [ParentId], [isActive]) VALUES (48, N'TDS Report', N'/Registration/RegistrationDetails', 46, 1)
+GO
+SET IDENTITY_INSERT [dbo].[Menu_tbl] OFF
+GO
